@@ -1,0 +1,12 @@
+<div class="panel panel-default" ng-repeat="(key, value) in getData">
+  <!-- Default panel contents -->
+  <div class="panel-heading" >{{key}}</div>
+  <div class="panel-body" >
+      <div ng-if="key == 'Poster'">
+          <img ng-src= '{{value}}'/>    
+      </div>
+      <div ng-if="key != 'Poster'">
+            {{value}}
+      </div> 
+  </div>
+</div>

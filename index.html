@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="albumSearch">
+    <head>
+        <title>Album Search</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta charset="UTF-8">
+
+        <!-- load bootstrap and fontawesome via CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        
+        <style>
+            html, body, input, select, textarea
+            {
+                font-size: 1.05em !important;
+            }
+        </style>
+        
+        <!-- load angular via CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.4.4/angular-route.min.js"></script>
+        <script src="https://code.angularjs.org/1.4.4/angular-resource.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div class="container" ng-controller="mainController">
+        
+            <div class="row">
+                <div class="jumbotron col-md-12">
+              <h1>Movie Search App</h1>
+              <p>Find details about your movie.</p>
+            </div>
+                <div class="col-md-4 col-md-offset-4">
+                   <form ng-submit="submit()">
+                    <div class="form-group">
+                        <label for="artist">Artist</label>
+                        <input type="input" class="form-control input-lg" id="artist" placeholder="insert movie" ng-model="movieName" >
+                    </div>
+                  
+                
+                    <button type="submit" class="btn btn-primary  btn-lg ">Submit</button>
+
+                        
+                           <div ng-view>
+                       
+                           </div>
+                      
+                    </form>
+                </div>
+           
+            </div>
+            
+            
+        </div>
+         
+         
+    </body>
+</html>
